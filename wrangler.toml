@@ -1,0 +1,14 @@
+name = "hacker-api-manager"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hacker-api-db"
+database_id = "REPLACE-WITH-YOUR-DATABASE-ID"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.production.d1_databases]
+DB = "REPLACE-WITH-YOUR-DATABASE-ID"
